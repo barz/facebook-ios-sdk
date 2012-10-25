@@ -68,7 +68,7 @@
     SLComposeViewController *composeViewController = [FBNativeDialogs composeViewControllerWithSession:session
                                                                                                handler:handler];
     if (!composeViewController) {
-        return NO;
+        return 0;
     }
     
     if (initialText) {
@@ -94,7 +94,7 @@
     
     [viewController presentModalViewController:composeViewController animated:YES];
         
-    return YES;
+    return 1;
 }
 
 + (BOOL)canPresentShareDialogWithSession:(FBSession*)session {
